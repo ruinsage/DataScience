@@ -10,7 +10,7 @@ for i in temperature :
     if temperature[i] >= 30 :
         list.append(i)
 
-print(list)
+#print(list)
 
 for i in list:
     if i == '일' :

@@ -15,7 +15,7 @@ print()
 print("-" * word_num)
 
 for i in temperature :
-    print(f"{temperature[i]}\t",end='')
+    print(f"{temperature[i]}\t",end = '')
 
 print()
 print("-" * word_num)

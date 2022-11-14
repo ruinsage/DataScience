@@ -10,7 +10,7 @@ temperatures = []
 
 for i in temperature :
     temperatures.append(temperature[i])
-
+#print(temperatures)
 min_temp = min(temperatures)
 
 print(f"가장 낮은 일간 최고 기온 : {min_temp}")

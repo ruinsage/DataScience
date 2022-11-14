@@ -10,7 +10,8 @@ total = 0
 for i in temperature :
     total += temperature[i]
 
-print(total)
+#print(total)
 avg = total / len(temperature)
-print("일주일간 최고 기온 평균 : %.1f" % avg)
-#print(f"일주일간 최고 기온 평균 : {avg,%.1f}")
+
+#print("일주일간 최고 기온 평균 : %.1f" % avg)
+print(f"일주일간 최고 기온 평균 :", format(avg,"3.1f"))

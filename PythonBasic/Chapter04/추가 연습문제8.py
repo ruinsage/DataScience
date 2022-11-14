@@ -8,12 +8,12 @@ score = []
 
 for i in point :
     score.append(point[i])
-
+#print(score)
 hight = max(score)
-
+#print(hight)
 for id in point :
     point[id] = hight
-
+#print(f"{id}{hight}")
 print(f"{id}님의 {hight}점이 가장 높은 점수입니다")
 
 
