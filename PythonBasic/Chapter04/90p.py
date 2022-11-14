@@ -12,3 +12,10 @@ if 4 in r:
     print("있음")
 else :
     print("없음")
+
+x = [2,4,1,5,7]
+for i in x :
+    y = int(i) * 2
+    list.append(y)
+
+print( list)
