@@ -1,11 +1,5 @@
-word1 = "Korea"
-word2 = "Baseball"
-word3 = "Orag"
-line = "======================="
-abbr =word1[:1] + word2[:1] + word3[:1]
-print(f"첫번째 단어 : {word1}")
-print(f"첫번째 단어 : {word2}")
-print(f"첫번째 단어 : {word3}")
-print(line)
-print(f"약자 : {abbr}")
 
+while True:
+    select2 = input("안녕하세요. 원하시는 재료를 입력하세요 :")
+    if select2 == "종료":
+        quit()

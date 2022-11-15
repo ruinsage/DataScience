@@ -6,8 +6,8 @@ for i in range(0,len_list) :
     list.append(r)
     print(list[i])
 
-serch = int(input("찾을 값을 입력하세요"))
-if serch in list :
+search = int(input("찾을 값을 입력하세요"))
+if search in list :
     print("YES")
 else:
     print("NO")

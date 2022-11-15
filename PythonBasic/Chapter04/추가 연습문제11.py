@@ -6,14 +6,18 @@ temperature = {'월':25.5,
                '토':35.3,
                '일':33.3}
 list = []
-for i in temperature :
-    if temperature[i] >= 30 :
-        list.append(i)
+for day in temperature :
+    if temperature[day] >= 30 :
+        list.append(day)
 
 #print(list)
+#len 사용해서 마지막 원소 찾아볼 것
+#print(len(list))
 
-for i in list:
-    if i == '일' :
-        print(i,end='')
+for day in list:
+    if day == list[len(list) - 1] :
+        print(day,end=' ')
     else :
-        print(i,end=', ')
+       print(day,end=', ')
+
+#print(f"{', '.join(list)}") #솔루션 방법

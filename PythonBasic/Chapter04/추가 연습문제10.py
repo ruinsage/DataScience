@@ -8,8 +8,8 @@ temperature = {'월':25.5,
 
 temperatures = []
 
-for i in temperature :
-    temperatures.append(temperature[i])
+for day in temperature :
+    temperatures.append(temperature[day])
 #print(temperatures)
 min_temp = min(temperatures)
 

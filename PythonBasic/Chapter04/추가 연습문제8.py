@@ -12,7 +12,8 @@ for i in point :
 hight = max(score)
 #print(hight)
 for id in point :
-    point[id] = hight
+     point[id] == hight
+    #max_id = id  #솔루션 방법
 #print(f"{id}{hight}")
 print(f"{id}님의 {hight}점이 가장 높은 점수입니다")
 
