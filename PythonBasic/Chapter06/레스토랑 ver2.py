@@ -20,15 +20,15 @@ class Restaurant:
         print(f"{self.name} 레스토랑 문닫습니다")
 
 select_list = []
-for i in range(1,4):
+for i in range(0,3):
     select = input("레스토랑 이름과 요리 종류를 선택하세요.(공백으로 구분):")
-    #print(select)
     select = select.split()
+    #print(select[0])
     select_list.append(Restaurant(select[0], select[1]))
 
-    #select_list[i].print()
-    select_list[i].describe_restaurant()
-    select_list[i].open_restaurant()
-    print("\n")
+    select_list[i].print()
+    #select_list[i].describe_restaurant()
+    #select_list[i].open_restaurant()
+    print()
 print("저녁 10시가 되었습니다")
 
