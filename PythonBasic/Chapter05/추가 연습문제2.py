@@ -1,7 +1,9 @@
-number = input("평균을 낼 숫자들을 입력하세요 예) 10 20 30 6")
-#print(number)
+number = input("평균을 낼 숫자들을 입력하세요 예) 10, 20, 30, 6")
+#number = "10,20,30"
+number_list = number.split(',')
+#print(number_list)
 
-number_list = number.split()
+#number_list = number.split(',')
 #print(number2)
 #print(len(number2))
 
