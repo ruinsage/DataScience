@@ -25,6 +25,7 @@ for i in range(1,4):
     #print(select)
     select = select.split()
     select_list.append(Restaurant(select[0], select[1]))
+
     #select_list[i].print()
     select_list[i].describe_restaurant()
     select_list[i].open_restaurant()
