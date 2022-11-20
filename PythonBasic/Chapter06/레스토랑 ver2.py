@@ -21,13 +21,9 @@ class Restaurant:
 
 select_list = []
 for i in range(0,3):
-    select = input("레스토랑 이름과 요리 종류를 선택하세요.(공백으로 구분):")
-    select = select.split()
-    #print(select[0])
+    select = input("레스토랑 이름과 요리 종류를 선택하세요.(공백으로 구분):").split()
     select_list.append(Restaurant(select[0], select[1]))
     select_list[i].print()
-    #select_list[i].describe_restaurant()
-    #select_list[i].open_restaurant()
     print()
 print("저녁 10시가 되었습니다")
 
