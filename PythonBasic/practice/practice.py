@@ -1,12 +1,26 @@
-array = [149,180,192,170]
-height = 167
-def solution(array, height):
-    if len(array) >= 1 and len(array) <= 100 and height >= 1 and height <= 100:
-        for class_height in array:
-            if class_height >= 1 and class_height <= 200:
-                if class_height > height:
-                    answer = + 1
-                    return answer
 
-print(len(array))
-print(solution(array, height))
+#line = blank = int(input("홀수를 입력하세요(0 <-종료):"))
+line = blank = 5
+print(int(blank/2))
+if line == 0 or line %2 == 0:
+    pass
+else:
+    print('-' * int(line))
+    for i in range(1, line + 2, 2):
+        #print('|',end= ' ')
+        print(' ' * int(blank / 2),end='')
+        print('*' * i, end='')
+        print(' ' * int(blank / 2))
+        #print('|')
+        blank -= 2
+
+    blank = blank + 2
+
+    for i in range(1, line, 2):
+        blank += 2
+        #print('|',end= ' ')
+        print(' ' * int(blank / 2),end='')
+        print('*' * int(line - i - 1),end='')
+        print(' ' * int(blank / 2))
+        #print('|')
+    print('-' * int(line))
