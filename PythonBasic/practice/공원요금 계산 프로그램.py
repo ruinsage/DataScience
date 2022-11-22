@@ -21,7 +21,8 @@ while True:
     elif age >65:
         grade = "노인"
     else:
-        break
+        print('다시 입력하세요\n')
+        continue
 
     if price == 0:
         print(f"귀하는 {grade}등급이며 요금은 무료입니다.")
