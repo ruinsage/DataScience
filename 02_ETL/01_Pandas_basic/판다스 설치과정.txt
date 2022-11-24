@@ -1,0 +1,17 @@
+
+pip uninstall jedi
+파워쉘 재실행
+
+jupyter.bat
+를 all타입으로 사용자 폴더에 저장(아나콘다 기본 폴더)
+
+
+
+
+
+
+
+
+
+pip install pandas          <-pandas 설치
+파이참 파일메뉴 세팅 -> 프로젝트 내부메뉴 python interpreter -> +버튼 pandas검색 후 인스톨
