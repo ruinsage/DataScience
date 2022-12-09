@@ -3,8 +3,8 @@ import csv
 import datetime
 
 
-input_file = 'supplier_data.csv'
-output_file = 'output_files/3output_basic.csv'
+input_file = 'supplier_data2.csv'
+output_file = 'output_files/3output_basic2.csv'
 
 with open(input_file, 'r', newline='') as csv_in_file:
 	with open(output_file, 'w', newline='') as csv_out_file:
@@ -30,25 +30,25 @@ with open(input_file, 'r', newline='') as csv_in_file:
 
 			# 날짜 검색
 			# in row_list[4].split('/') => ex) ['1','20','23']
-			date_raw =[ int(value) for value in row_list[4].split('/') ]
+			date_raw =[ int(value) for value in row_list[4].split('-') ]
 			# row_list의 네번째 열 => (Purchase Date)의 데이터를 '/'로 나누고 int형으로 변환 후
 			# value로 하나씩 꺼낸다 []리스트로 감싸져있으므로 첫행의 결과를 예로들면
 			# # date_raw => ex) [1,20,23]와 같다
-			current_date = datetime.date(2000+date_raw[2],date_raw[0],date_raw[1])
+			current_date = datetime.date(date_raw[0],date_raw[1],date_raw[2])
 			start_date_condition = datetime.date(2023,1,30)
 			end_date_condition = datetime.date(2023, 2, 3)
 			#
 			# if (current_date >= start_date_condition) and (current_date <= end_date_condition):
 			#  	filewriter.writerow(row_list)
 
-			end_date_condition = start_date_condition + datetime.timedelta(days=4)
-			if (current_date >= start_date_condition) and (current_date <= end_date_condition):
-			 	filewriter.writerow(row_list)
+			#end_date_condition = start_date_condition + datetime.timedelta(days=7)
+			#if (current_date >= start_date_condition) and (current_date <= end_date_condition):
+			# 	filewriter.writerow(row_list)
 
 			# 월요일 데이터 검색
 			# date.weekday() 월요일 0 화요일 1 ...
-			#if current_date.weekday()==0:
-			# 	filewriter.writerow(row_list)
+			if current_date.weekday()==5:
+			 	filewriter.writerow(row_list)
 
 			# 1월 데이터 추출
 			#if current_date.month == 1:
