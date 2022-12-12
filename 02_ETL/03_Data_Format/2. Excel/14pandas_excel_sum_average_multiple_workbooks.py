@@ -7,11 +7,17 @@ input_files = glob.glob(os.path.join(input_directory,'*.xls'))
 output_file = 'output_files/14output_pandas.xlsx'
 
 data_frames = []
-for data in input_files:
-    dataframes = (pd.read_excel(data, sheet_name=None, index_col=None))
-    for name, dataframe in dataframes.items():
-        #print(dataframe)
-        data_frames.append()
+for file in input_files:
+    files = pd.read_excel(file, sheet_name=None, index_col=None)
+
+    for name, worksheet in files.items():
+        print(name)
+        #print(worksheet['Sale Amount'].sum())
+        workbook_total_sales = worksheet['Sale Amount'].sum()
+        number_of_sales = len(worksheet['Sale Amount'])
+        #print(number_of_sheet)
+        workbook_average_sales = workbook_total_sales / number_of_sales
+        #print(average_sales)
 
 
 
