@@ -1,10 +1,7 @@
 def solution(slice, n):
     answer = 0
     if n >= 1 and n <= 100 and slice >=2 and slice <=10:
-        if n % slice == 0:
-            answer = n // slice
-        else:
-            answer = n // slice + 1
+            answer = n // slice + int(bool(n%slice != 0))
     return answer
 
 slice = 7
