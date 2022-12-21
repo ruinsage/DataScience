@@ -1,0 +1,72 @@
+-- Q1] 이름이 'Steven'인 직원의 이름과 입사한 년, 입사한 월, 입사한 일을 출력하시오
+
+select first_name, to_char(hire_date,'YYYY') as HiredYear, to_char(hire_date,'MM') as HiredMonth, to_char(hire_date,'DD') as HiredDay  from employees
+where first_name = 'Steven';
+
+-- Q2] 사원 전화번호열을 '010-123-4567' 과 같이 출력하시오 
+
+select replace(phone_number,',','-') from employees;
+
+-- Q3] 커미션이 없는 사원들에게 상품권을 지급하려고 합니다. 상품권을 지급하는 사원들에게는 'gift card'
+-- 인상율이 가장 높은 사원에게는 'best employee'
+-- 그 외 사원들에게는 인상된 급여액을 표시하는 보너스 열을 추가하여
+-- 해당 사원들의 이름과 보너스를 출력하세요. (coalesce,decode 함수 사용할 것)
+
+select first_name, decode(coalesce(commission_pct*salary,0),0,'gift card'
+                                                         ,(select max(commission_pct*salary) from employees),'best employee'
+                                                          ,commission_pct*salary) bonus from employees;
+
+
+
+-- Q4] 보너스가 2000달러보다 작거나 보너스가 없는 사원들에게 상품권을 지급하려고 합니다.
+-- 보너스를 지급하는 사원들에게는 'gift card' 보너스를 지급하지 않는 사원들에게는 인상된 급여액을 표시하는 보너스 열을 추가하여
+-- 해당 사원들의 이름과 보너스를 출력하세요. (coalesce, decode 혹은 case 함수 사용할 것)
+
+select first_name, decode((case when salary*nvl(commission_pct,0) <= 2000 then 0
+                               when salary*nvl(commission_pct,0) = (select max(salary*commission_pct) from employees) then 1
+                               else salary*commission_pct
+                               END),0,'gift card',
+                          1,'best_employee',
+                          salary*commission_pct)
+                        as bonus
+                        from employees;
+
+select first_name, decode((case when salary*nvl(commission_pct,0) < 2000 then 0
+                                when salary*nvl(commission_pct,0) >= 2000 then 1
+                                end)
+                        ,0,'gift card'
+                        ,1,salary*nvl(commission_pct,0)) as bonus
+from employees;
+
+
+                            
+-- Q5]  manager_id가 없는 직원은 사장님이므로 manager_id를 0으로 고치세요.
+-- 업무 부담이 높은 매니져 순으로 manager_id와 담당직원수를 출력하세요.
+-- 업무 부담이 높은 매니져 순은 담당하고 있는 직원이 가장 많은 직원순입니다.
+-- (nvl,count,group by, order by 사용) 
+
+select nvl(manager_id,0), count(*) 담당직원수 from employees group by manager_id
+order by 담당직원수 desc;
+
+
+-- Q] 부서번호가 없는 'Kimberely'직원의 부서번호를 직업ID가 같은 직원의 부서 번호로 변경하고
+-- 'Kimberely' 직원의 이름, 직업ID, 부서ID를 출력하세요.
+-- 참고(NVL,중첩함수, max or min 중 하나 선택)
+
+select first_name, job_id, NVL(department_id,(select max(department_id) from employees 
+where job_id = (select job_id from employees where first_name = 'Kimberely'))) department_id
+from employees where first_name = 'Kimberely'; 
+
+select * from employees where department_id = 50;
+                                                  
+-- Q] UNION
+
+-- Q] ROLLUP
+
+-- Q1 ] 오늘 날짜, 어제 날짜 출력 해주세요
+select to_char(sysdate,'YYYY"년" MM"월" DD"일"') 오늘날짜, to_char(sysdate-1,'YYYY"년" MM"월" DD"일"') 어제날짜 from dual;
+
+select first_name from employees where department_id =
+(select department_id from
+(select department_id, count(*) from employees GROUP by department_id order by count(*) desc) 
+where rownum = 1);
