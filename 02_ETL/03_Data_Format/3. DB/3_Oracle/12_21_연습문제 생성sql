@@ -1,17 +1,20 @@
 -- Q1] 이름이 'Steven'인 직원의 이름과 입사한 년, 입사한 월, 입사한 일을 출력하시오
 
+-- my answer
 select first_name, to_char(hire_date,'YYYY') as HiredYear, to_char(hire_date,'MM') as HiredMonth, to_char(hire_date,'DD') as HiredDay  from employees
 where first_name = 'Steven';
 
 -- Q2] 사원 전화번호열을 '010-123-4567' 과 같이 출력하시오 
 
+-- my answer
 select replace(phone_number,',','-') from employees;
 
 -- Q3] 커미션이 없는 사원들에게 상품권을 지급하려고 합니다. 상품권을 지급하는 사원들에게는 'gift card'
 -- 인상율이 가장 높은 사원에게는 'best employee'
 -- 그 외 사원들에게는 인상된 급여액을 표시하는 보너스 열을 추가하여
--- 해당 사원들의 이름과 보너스를 출력하세요. (coalesce,decode 함수 사용할 것)
+-- 해당 사원들의 이름과 보너스를 출력하세요. (coalesce,decode 답에서는 함수 사용함 이외함수도 사용가능)
 
+-- my answer
 select first_name, decode(coalesce(commission_pct*salary,0),0,'gift card'
                                                          ,(select max(commission_pct*salary) from employees),'best employee'
                                                           ,commission_pct*salary) bonus from employees;
@@ -22,6 +25,7 @@ select first_name, decode(coalesce(commission_pct*salary,0),0,'gift card'
 -- 보너스를 지급하는 사원들에게는 'gift card' 보너스를 지급하지 않는 사원들에게는 인상된 급여액을 표시하는 보너스 열을 추가하여
 -- 해당 사원들의 이름과 보너스를 출력하세요. (coalesce, decode 혹은 case 함수 사용할 것)
 
+-- my answer
 select first_name, decode((case when salary*nvl(commission_pct,0) <= 2000 then 0
                                when salary*nvl(commission_pct,0) = (select max(salary*commission_pct) from employees) then 1
                                else salary*commission_pct
@@ -40,24 +44,110 @@ from employees;
 
 
                             
--- Q5]  manager_id가 없는 직원은 사장님이므로 manager_id를 0으로 고치세요.
--- 업무 부담이 높은 매니져 순으로 manager_id와 담당직원수를 출력하세요.
+-- Q5] manager_id가 없는 직원은 사장님이므로 manager_id를 0으로 고치고
+-- 사장님의 이름, 매니져아이디를 출력하세요.
+
+-- my answer
+select first_name, nvl(manager_id,0) manager_id from employees
+where manager_id is null;
+
+select first_name, nvl(MANAGER_ID,0) boss 
+from employees
+where MANAGER_ID is null;
+
+-- Q] 업무 부담이 높은 매니져 순으로 manager_id와 담당직원수를 출력하세요.
 -- 업무 부담이 높은 매니져 순은 담당하고 있는 직원이 가장 많은 직원순입니다.
--- (nvl,count,group by, order by 사용) 
+-- (답에서는 nvl,count,group by, order by 사용) 
 
-select nvl(manager_id,0), count(*) 담당직원수 from employees group by manager_id
-order by 담당직원수 desc;
+select e2.first_name, e1.manager_id, count(*) manage_staff from employees e1 
+join employees e2
+on e1.manager_id = e2.employee_id
+group by e2.first_name, e1.manager_id
+order by manage_staff desc;
 
 
--- Q] 부서번호가 없는 'Kimberely'직원의 부서번호를 직업ID가 같은 직원의 부서 번호로 변경하고
+
+select m.first_name,e.manager_id, count(*) workload 
+from employees e 
+join employees m 
+on e.manager_id = M.employee_id
+group by e.manager_id,m.first_name
+order by workload desc;
+
+
+
+-- Q]employees 테이블에서 부서번호가 없는 'Kimberely'직원의 부서번호를 직업ID가 같은 직원의 부서 번호로 변경하고
 -- 'Kimberely' 직원의 이름, 직업ID, 부서ID를 출력하세요.
--- 참고(NVL,중첩함수, max or min 중 하나 선택)
+-- (답에서는 NVL, 서브쿼리, rownum 사용)
 
-select first_name, job_id, NVL(department_id,(select max(department_id) from employees 
-where job_id = (select job_id from employees where first_name = 'Kimberely'))) department_id
+-- my answer
+select first_name, job_id, NVL(department_id,(select department_id from employees 
+where job_id = (select job_id from employees where first_name = 'Kimberely') and rownum = 1)) department_id
 from employees where first_name = 'Kimberely'; 
 
-select * from employees where department_id = 50;
+select first_name,job_id,nvl(kim.department_id, 
+        (select department_id from employees 
+        where job_id=(select job_id from employees 
+        where first_name='Kimberely') and department_id is not null
+        group by department_id)) wow 
+from employees kim
+where lower(first_name)='kimberely';
+
+
+-- select fitst_name, job_id, department_id from ;
+
+-- Q] pivot을 사용하여 employees 테이블에서 직책(job id)별, 입사월 별 직원 수를 구하시오.
+-- 이때, 입사월은 1월의 경우 jan, 2의 경우 feb, ... , 12월의 경우 dec으로 표현하시오
+
+-- my answer
+select job_id, to_char(hire_date,'MM') as hire_month from employees
+group by job_id, to_char(hire_date,'MM') order by hire_month;
+
+select *
+from (select job_id, to_char(hire_date,'MM') as hire_month from employees
+group by job_id, to_char(hire_date,'MM') order by hire_month)
+pivot(
+    count(*)
+    for hire_month
+    in ('01' as jan,
+        '02' as feb,
+        '03' as mar,
+        '04' as apr,
+        '05' as may,
+        '06' as jun,
+        '07' as jul,
+        '08' as aug,
+        '09' as sep,
+        '10' as oct,
+        '11' as nov,
+        '12' as dec)
+    )
+;
+
+SELECT * 
+  FROM ( 
+         SELECT job_id ,
+         TO_CHAR(HIRE_DATE, 'mon') HIRE_MONTH
+           FROM employees
+       ) 
+ PIVOT (
+        count(*)
+         FOR HIRE_MONTH IN ('1월', '2월', '3월', '4월', '5월', '6월',
+                            '7월', '8월','9월','10월','11월','12월') 
+       );
+ 
+
+-- Q] 매니저가 있는 사원을 찾아 다음과같이 출력하시오 (join 사용)
+-- ***의 매니져는 *** 입니다.
+
+-- my answer
+select e.first_name || '의 매니져는' || m.first_name || '입니다.' staff_and_manager
+from employees e
+join employees m 
+on e.employee_id = m.manager_id;
+
+SELECT e.first_name||'의 매니저는 '|| m.first_name||'입니다.'  매니저_소개
+FROM EMPLOYEES e join employees m on e.manager_id = M.employee_id;
                                                   
 -- Q] UNION
 
