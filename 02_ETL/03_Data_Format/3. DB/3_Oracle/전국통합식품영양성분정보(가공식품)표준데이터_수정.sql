@@ -20,6 +20,20 @@ where 식품대분류명 in ('농산가공식품류','동물성가공식품류','두부류 또는 묵류','�
 group by 식품소분류명 order by count(*) desc;
 
 
+select rn 순위, 식품명, 탄수화물, 지방, 단백질 , 식품대분류명 from
+(select 식품명, 탄수화물, 지방, 단백질 , 식품대분류명, NTILE(4) over(order by 탄수화물 desc) as 탄수화물NT, NTILE(4) over(order by 단백질 desc) as 단백질NT,
+NTILE(4) over(order by 지방 desc) as 지방NT, row_number() over(partition by 식품대분류명 order by 단백질 desc) rn
+from processed_food
+where 식품대분류명 in ('농산가공식품류','동물성가공식품류','두부류 또는 묵류','수산가공식품류','식육가공품 및 포장육',
+                       '알가공품류','유가공품류','절임류 또는 조림류','조미식품','즉석식품류','특수영양식품','특수의료용도식품' )
+                       and 트랜스지방산 = 0
+                       and 식품명 not like '%음료%'
+                       and 식품명 not like '%미숫가루%'
+                       and 탄수화물 < 100
+order by 식품대분류명 , 단백질 desc, 탄수화물 asc, 지방 asc, 에너지 asc)
+where rn <= 3;
+
+
 select 식품명, 탄수화물, 지방, 단백질 , 식품대분류명, NTILE(4) over(order by 탄수화물 desc) as 탄수화물NT, NTILE(4) over(order by 단백질 desc) as 단백질NT,
 NTILE(4) over(order by 지방 desc) as 지방NT
 from processed_food
@@ -29,7 +43,7 @@ where 식품대분류명 in ('농산가공식품류','동물성가공식품류','두부류 또는 묵류','�
                        and 식품명 not like '%음료%'
                        and 식품명 not like '%미숫가루%'
                        and 탄수화물 < 100
-order by 단백질 desc, 탄수화물 asc, 지방 asc, 에너지 asc;
+order by 식품대분류명 , 단백질 desc, 탄수화물 asc, 지방 asc, 에너지 asc;
 
 
 
