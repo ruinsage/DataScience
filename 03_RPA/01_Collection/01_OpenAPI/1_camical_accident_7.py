@@ -51,4 +51,4 @@ for page_no in range(1, request_total_num+1):
 
 print(all_data.shape)
 
-all_data.to_csv('화학사고정보_통합.csv', index = False, encoding= 'cp949')
+all_data.to_csv('화학사고정보_통합.csv', index = False, encoding= 'utf-8')

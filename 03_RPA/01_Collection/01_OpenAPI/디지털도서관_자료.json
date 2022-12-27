@@ -1,0 +1,956 @@
+[
+    {
+        "author": "스케슬린 찰스, 자넷",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 1,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "환경부",
+                "volume": "843.6 스874ㅍ V.1/V.2"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"스케슬린 찰스, 자넷\",\"PAGE\":\"2책\",\"HEIGHT\":\"21 cm\"}",
+        "id": 5862481,
+        "isbn": "9791136269423",
+        "issn": null,
+        "newResources": null,
+        "publication": "서울 : 하빌리스 : 대원씨아이,  2021",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5593196,
+                "publication": "서울 :북폴리오 :미래엔,2015",
+                "titleStatement": "걸 온 더 트레인"
+            },
+            {
+                "id": 5593525,
+                "publication": "서울 :황금가지,2014",
+                "titleStatement": "조이랜드 :스티븐 킹 장편소설"
+            },
+            {
+                "id": 5593663,
+                "publication": "의왕 :에이콘,2015",
+                "titleStatement": "레디 플레이어 원 :2044년 가상현실 오아시스의 게임에 숨겨진 세 가지 열쇠를 찾아서"
+            }
+        ],
+        "thumbnailUrl": "https://image.aladin.co.kr/product/26761/87/cover/k602730482_1.jpg",
+        "titleStatement": "파리의 도서관 : 자넷 스케슬린 찰스 장편소설"
+    },
+    {
+        "author": "국립생물자원관 [편]",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "G 595.78 국298ㅈ v.1"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PAGE\":\"ix, 49 p\",\"HEIGHT\":\"26 cm\"}",
+        "id": 5855255,
+        "isbn": null,
+        "issn": null,
+        "newResources": null,
+        "publication": "[인천] : 국립생물자원관,  2019",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5698605,
+                "publication": "서울 :白楊堂, 1947.",
+                "titleStatement": "朝鮮나비이름의由來記"
+            },
+            {
+                "id": 5697535,
+                "publication": "서울 :자연과생태, 2020.",
+                "titleStatement": "한국 나방 도감 =A photographic guide to Korean moths"
+            },
+            {
+                "id": 173934,
+                "publication": "서울 : 진선, 2005.",
+                "titleStatement": "(봄·여름·가을·겨울) 나비일기"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "자생 독나방류의 독 라이브러리 구축 및 기능성 탐색 :  1차년도. Ⅰ"
+    },
+    {
+        "author": "Thoreau, Henry David",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "PS3048 T488w"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Thoreau, Henry David\",\"PAGE\":\"360 p\",\"HEIGHT\":\"15 cm.\"}",
+        "id": 5852077,
+        "isbn": "9781509826704",
+        "issn": null,
+        "newResources": null,
+        "publication": "London  : Collectors Library,  2016.",
+        "resources": null,
+        "similars": [],
+        "thumbnailUrl": null,
+        "titleStatement": "Walden"
+    },
+    {
+        "author": "Morton, Timothy",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출중",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "GF75 M891d"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Morton, Timothy\",\"PAGE\":\"xii, 191 p\",\"HEIGHT\":\"22 cm.\"}",
+        "id": 5852069,
+        "isbn": "9780231177528",
+        "issn": null,
+        "newResources": null,
+        "publication": "New York : Columbia University Press,  2016.",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5850185,
+                "publication": "파주 : 한길사,  2016",
+                "titleStatement": "잃어버린 야생을 찾아서 :  어제의 세계와 내일의 세계"
+            },
+            {
+                "id": 5804953,
+                "publication": "New York : Oxford University Press,  2002.",
+                "titleStatement": "The nature of design : ecology, culture, and human intention"
+            },
+            {
+                "id": 5805834,
+                "publication": "Oxford : Oxford Univ Pr,  2010.",
+                "titleStatement": "Systemic management :  sustainable human interactions with ecosystems and the biosphere"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "Dark ecology :  for a logic of future coexistence"
+    },
+    {
+        "author": "Elwes, Henry John",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "QK306 E52t"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Elwes, Henry John\",\"PAGE\":\"371 p\",\"HEIGHT\":\"30 cm\"}",
+        "id": 5851244,
+        "isbn": "9781108069373",
+        "issn": null,
+        "newResources": null,
+        "publication": "Cambridge: Cambridge University Press,  2015",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5849248,
+                "publication": "British: Botanical Society of the British Istes,  2009",
+                "titleStatement": "The Vegetative Key to the British Flora"
+            },
+            {
+                "id": 5848114,
+                "publication": "British: Botanical Society of the British Istes,  2009",
+                "titleStatement": "The Vegetative Key to the British Flora"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "Trees of Great Britain and Ireland. Vol.6"
+    },
+    {
+        "author": "Jacson, Maria Elizabeth",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "QK49 J21b"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Jacson, Maria Elizabeth\",\"PAGE\":\"243, vii, 74 p\",\"HEIGHT\":\"22 cm\"}",
+        "id": 5851242,
+        "isbn": "9781108067027",
+        "issn": null,
+        "newResources": null,
+        "publication": "Cambridge: Cambridge University Press,  2015",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5801353,
+                "publication": "[인천] : 국립생물자원관,  2010",
+                "titleStatement": "자생식물의 유용물질 탐색 발굴 = Exploration of natural products in Korean native plants"
+            },
+            {
+                "id": 5854881,
+                "publication": "東京: 文一總合出版,  2018",
+                "titleStatement": "新しい植物分類體系 :  APGでみる日本の植物"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "Botanical Lectures And the Florist's Manual"
+    },
+    {
+        "author": "도서관운동연구회",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "027.4 도54ㄱ"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"CORPORATE_NAME\":\"도서관운동연구회\",\"PAGE\":\"247 p\",\"HEIGHT\":\"23 cm.\"}",
+        "id": 5849366,
+        "isbn": "9788983506344",
+        "issn": null,
+        "newResources": null,
+        "publication": "서울 : 예영 커뮤니케이션,  2000.",
+        "resources": null,
+        "similars": [],
+        "thumbnailUrl": "https://image.aladin.co.kr/product/49/65/cover/8983506342_1.gif",
+        "titleStatement": "공공도서관 운영론"
+    },
+    {
+        "author": "다운스, 토머스",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출불가",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "B 490 토34ㅁ"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"CORPORATE_NAME\":\"초록큰나무\",\"PERSONAL_NAME\":\"다운스, 토머스\",\"PAGE\":\"1책\",\"HEIGHT\":\"26 cm\"}",
+        "id": 5849268,
+        "isbn": "9788993828771",
+        "issn": null,
+        "newResources": null,
+        "publication": "서울: 보임북스: 꼬마대통령,  2009",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5814031,
+                "publication": "서울: 종이책,  2014",
+                "titleStatement": "동물원에 놀러가요"
+            },
+            {
+                "id": 5700003,
+                "publication": "경기 :사월의책 ,2019",
+                "titleStatement": "동물 윤리 대논쟁 :동물을 둘러싼 열 가지 철학 논쟁"
+            },
+            {
+                "id": 5697522,
+                "publication": "고양 :푸른행복, 2020.",
+                "titleStatement": "한반도 잠자리 곤충지 =(The)Damselflies and Dragonflies of Korean Peninsular :한반도에 사는 잠자리의 실체를 정리하고, 각 종의 형태와 생태, 분포 등을 설명!"
+            }
+        ],
+        "thumbnailUrl": "https://image.aladin.co.kr/product/6843/9/cover/8993828776_1.jpg",
+        "titleStatement": "멸종 위기 동물들"
+    },
+    {
+        "author": "Doody, J. P",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "QH88.5 D691s"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Doody, J. P.\",\"PAGE\":\"xviii, 303 p\",\"HEIGHT\":\"25 cm.\"}",
+        "id": 5849260,
+        "isbn": "9789401781251",
+        "issn": null,
+        "newResources": null,
+        "publication": "Dordrecht : Springer,  2013.",
+        "resources": null,
+        "similars": [],
+        "thumbnailUrl": null,
+        "titleStatement": "Sand dune conservation, management and restoration"
+    },
+    {
+        "author": "Peskett, A. G",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "PA6237 C128c"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Peskett, A. G.\",\"PAGE\":\"xii, 369, 8 p. , [12] p. of plates\",\"HEIGHT\":\"17 cm.\"}",
+        "id": 5848142,
+        "isbn": "9780674990432",
+        "issn": null,
+        "newResources": null,
+        "publication": "Cambridge, Massachusetts : Harvard University Press",
+        "resources": null,
+        "similars": [],
+        "thumbnailUrl": null,
+        "titleStatement": "Caesar :  the civil wars"
+    },
+    {
+        "author": "Caesar, Julius",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "PA6237 C128c v.3"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Caesar, Julius.\",\"PAGE\":\"xiv, 426 p\",\"HEIGHT\":\"17 cm.\"}",
+        "id": 5848140,
+        "isbn": "9780674994430",
+        "issn": null,
+        "newResources": null,
+        "publication": "Cambridge : Harvard University Press,  1955.",
+        "resources": null,
+        "similars": [],
+        "thumbnailUrl": null,
+        "titleStatement": "Caesar. Ⅲ, Alexandrian war, African war, Spanish war"
+    },
+    {
+        "author": "Caesar, Julius",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출가능",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "PA6237 C128c v.1"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Caesar, Julius\",\"PAGE\":\"xxii, 631 p\",\"HEIGHT\":\"17 cm.\"}",
+        "id": 5848134,
+        "isbn": "9780674990807",
+        "issn": null,
+        "newResources": null,
+        "publication": "Cambridge, Mass. : Harvard University Press,  1979.",
+        "resources": null,
+        "similars": [],
+        "thumbnailUrl": null,
+        "titleStatement": "Caesar. Ⅰ , The Gallic war"
+    },
+    {
+        "author": "Howell, Laura",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출불가",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "481.508 H859w"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Howell, Laura\",\"PAGE\":\"64 p\",\"HEIGHT\":\"28 cm\"}",
+        "id": 5846171,
+        "isbn": "9780746046166",
+        "issn": null,
+        "newResources": null,
+        "publication": "London: Usborne Publishing,  2001",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5595845,
+                "publication": "서울:지오북,2012",
+                "titleStatement": "식물은 왜 바흐를 좋아할까？"
+            },
+            {
+                "id": 5823037,
+                "publication": "서울: 자람,  2007",
+                "titleStatement": "사계절 꽃 이야기"
+            },
+            {
+                "id": 5823181,
+                "publication": "서울: 소담주니어,  2013",
+                "titleStatement": "찌릿찌릿 식물"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "World of plants"
+    },
+    {
+        "author": "Whitehouse, Patricia",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출불가",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "375.1 W593w"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Whitehouse, Patricia\",\"PAGE\":\"24 p\",\"HEIGHT\":\"23 cm\"}",
+        "id": 5846163,
+        "isbn": "9781588108845",
+        "issn": null,
+        "newResources": null,
+        "publication": "London: Heinemann Library,  2011",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5845926,
+                "publication": "New York: CreateSpace Independent Publishing,  2015",
+                "titleStatement": "Ozzy The Pomeranian :  ABC's With Ozzy"
+            },
+            {
+                "id": 5846153,
+                "publication": "Berkeley, California: North Atlantic Books,  2013",
+                "titleStatement": "V is for vegan :  the ABCs of being kind"
+            },
+            {
+                "id": 5843065,
+                "publication": "New York, NY: Cartwheel Books,  2015",
+                "titleStatement": "Numbers"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "What's Awake? ABC"
+    },
+    {
+        "author": "Whitehouse, Patricia",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출불가",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "375.1 W593w"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Whitehouse, Patricia\",\"PAGE\":\"24 p\",\"HEIGHT\":\"23 cm\"}",
+        "id": 5846162,
+        "isbn": "9781588108852",
+        "issn": null,
+        "newResources": null,
+        "publication": "Chicago, Ill.: Heinemann Library,  2003",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5820718,
+                "publication": "서울: 아람,  2014",
+                "titleStatement": "알 속에 숨은 아기"
+            },
+            {
+                "id": 5846161,
+                "publication": "Somerville, Mass.: Candlewick Press,  2012",
+                "titleStatement": "What happens next?"
+            },
+            {
+                "id": 5820699,
+                "publication": "서울: 아람,  2014",
+                "titleStatement": "어느 날 하늘에서"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "What's awake 1 2 3"
+    },
+    {
+        "author": "Felix, Rebecca",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출불가",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "491.52 F316w"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Felix, Rebecca\",\"PAGE\":\"24 p\",\"HEIGHT\":\"21 cm\"}",
+        "id": 5846160,
+        "isbn": "9781610809320",
+        "issn": null,
+        "newResources": null,
+        "publication": "Ann Arbor, Michigan: Cherry Lake Publishing,  2013",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5842996,
+                "publication": "New York: Firefly,  2011",
+                "titleStatement": "Animals of the cold"
+            },
+            {
+                "id": 5842938,
+                "publication": "North Mankato, MN: 12-Story Library,  2015",
+                "titleStatement": "12 marine animals back from the brink. [5]"
+            },
+            {
+                "id": 5593466,
+                "publication": "서울:은행나무,2015",
+                "titleStatement": "상상하기 어려운 존재에 관한 책:공존하려는 인간에게만 보이는 것들"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "What do animals do in fall?"
+    },
+    {
+        "author": "Lundgren, Julie K",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출불가",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "498.7 L963v"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Lundgren, Julie K.\",\"PAGE\":\"24 p\",\"HEIGHT\":\"22 cm\"}",
+        "id": 5846154,
+        "isbn": "9781606943960",
+        "issn": null,
+        "newResources": null,
+        "publication": "Vero Beach, FL: Rourke Pub,  2010",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5843118,
+                "publication": "Vero Beach, Fla.: Rourke Pub,  2010",
+                "titleStatement": "Falcons"
+            },
+            {
+                "id": 5126963,
+                "publication": "서울:궁리,2010",
+                "titleStatement": "밤의 제왕 수리부엉이:KBS 자연 다큐멘터리"
+            },
+            {
+                "id": 5843055,
+                "publication": "North Mankato, Minnesota: Capstone Press,  2015",
+                "titleStatement": "Burrowing owls"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "Vultures"
+    },
+    {
+        "author": "Woodward, John",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출불가",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "454 W912s"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Woodward, John\",\"PAGE\":\"48 p\",\"HEIGHT\":\"27 cm\"}",
+        "id": 5846104,
+        "isbn": "9781403451279",
+        "issn": null,
+        "newResources": null,
+        "publication": "Chicago, Ill.: Heinemann Library,  2004",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5844132,
+                "publication": "Chicago: Heinemann Library,  2004",
+                "titleStatement": "Midnight zone"
+            },
+            {
+                "id": 5843130,
+                "publication": "New York: Soundprints,  2010",
+                "titleStatement": "Galapagos Fur Seal :  at Home in the Tropics"
+            },
+            {
+                "id": 5843123,
+                "publication": "us: Magic Wagon,  c2012",
+                "titleStatement": "Fever in the oceans"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "Sunlit zone"
+    },
+    {
+        "author": "Matthews, Rupert",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출불가",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "457 M442s"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Matthews, Rupert\",\"PAGE\":\"32 p\",\"HEIGHT\":\"23 cm\"}",
+        "id": 5846102,
+        "isbn": "9781403436580",
+        "issn": null,
+        "newResources": null,
+        "publication": "Chicago, Ill.: Heinemann Library,  2004",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5843104,
+                "publication": "Chicago, Ill.: Heinemann Library,  2004",
+                "titleStatement": "Diplodocus"
+            },
+            {
+                "id": 5846026,
+                "publication": "Chicago, Ill.: Heinemann Library,  2004",
+                "titleStatement": "Sabretooth"
+            },
+            {
+                "id": 5844166,
+                "publication": "United Kingdom: Moonlight Pub Ltd,  2013",
+                "titleStatement": "My first encyclopedia of dinosaurs"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "Stegosaurus"
+    },
+    {
+        "author": "Wheeler, Jill C",
+        "biblioType": {
+            "biblioSchema": {
+                "id": 1,
+                "isMarc": true,
+                "name": "KORMARC"
+            },
+            "id": 1,
+            "materialType": {
+                "id": 1
+            },
+            "name": "단행본"
+        },
+        "branchVolumes": [
+            {
+                "cState": "대출불가",
+                "hasItem": true,
+                "id": 25,
+                "isCr": false,
+                "isSubscribed": false,
+                "name": "국립생태원",
+                "volume": "499.743 W564s"
+            }
+        ],
+        "erSources": [],
+        "etcContent": "{\"PERSONAL_NAME\":\"Wheeler, Jill C.\",\"PAGE\":\"24 p\",\"HEIGHT\":\"21 cm\"}",
+        "id": 5846030,
+        "isbn": "9781604537314",
+        "issn": null,
+        "newResources": null,
+        "publication": "Edina, Minn.: ABDO,  2011",
+        "resources": null,
+        "similars": [
+            {
+                "id": 5843033,
+                "publication": "Novato, CA.: Treasure Bay, Inc.",
+                "titleStatement": "Big cats, little cats"
+            },
+            {
+                "id": 5843066,
+                "publication": "East Hendred: Moonlight,  2003",
+                "titleStatement": "Cats"
+            },
+            {
+                "id": 5845016,
+                "publication": "Novato, CA.: Treasure Bay, Inc.",
+                "titleStatement": "Big cats, little cats"
+            }
+        ],
+        "thumbnailUrl": null,
+        "titleStatement": "Safari cats"
+    }
+]
