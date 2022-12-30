@@ -1,0 +1,28 @@
+폭포수 모델(Water Fall) => 각 단계에서 상위단계로 되돌아 가기 어렵다.
+
+Requirements Analysis 요구사항 분석
+
+High Level Design
+
+Detailed Design
+
+Implementation 구현
+
+Unit Testing 단위 테스트
+
+Integration Testing 통합테스트
+
+System Testing 시스템 테스트 (시나리오 테스트)
+
+Acceptance Testing 사용자 테스트 
+
+
+나선형 모델 (United Process) => 대규모 프로젝트
+
+나선형 경량화 모델 (Asile)
+
+
+
+사용자 페르소나 도출 (문제점 => 요구사항) (인사 담당자 페르소나 필수 포함)
+
+프로젝트 비전 (목표) 도출
