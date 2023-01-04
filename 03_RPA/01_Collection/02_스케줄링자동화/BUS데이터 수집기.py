@@ -81,7 +81,7 @@ def Bus_info_collector():
 
     if raw_str_json:
         raw_json = json.loads(raw_str_json)
-
+    print(raw_json)
     column_list, all_data = json_to_df_info(raw_json)
 
     df = pd.DataFrame(all_data, columns=column_list)
