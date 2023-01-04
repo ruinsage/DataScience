@@ -1,0 +1,13 @@
+[양석훈 학생 문의 사항 답변]
+HR 계정 초기화 하기
+SQL> conn /as sysdba
+Connected.
+SQL> alter user hr account unlock identified by hr;
+
+User altered.
+SQL> conn hr/hr
+Connected.
+SQL> select count(*) from employees;
+
+혹시 sysdba 비밀번호 물어본다면
+oracle
