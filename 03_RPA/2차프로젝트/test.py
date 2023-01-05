@@ -211,18 +211,21 @@ base_service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=base_service, options=base_options)
 
 
-url2 = all_rent_page[1]
+url2 = all_rent_page[0]
 url2
 print(url2)
 driver.get(url2)
-time.sleep(1)
-soup6=BeautifulSoup(driver.page_source,'html.parser')
-time.sleep(1)
+
 while True:
+
+    time.sleep(-1)
+    soup4=BeautifulSoup(driver.page_source,'html.parser')
+    time.sleep(-1)
 #    more_review = soup6.find(attrs = {'class' : 'link_more'}).text
-    fold_review = soup6.find(attrs = {'class' : 'link_more link_unfold'})
-    if fold_review:
+#    fold_review = soup6.find(attrs = {'class' : 'link_more link_unfold'})
+    if soup4.find(attrs = {'class' : 'link_more'}):
+        driver.find_element(By.XPATH, '//*[@id="mArticle"]/div[6]/div[2]/a/span[1]').click()
+
+    else:
         print('stop')
         break
-    else:
-        driver.find_element(By.XPATH, '//*[@id="mArticle"]/div[7]/div[2]/a/span[1]').click()
