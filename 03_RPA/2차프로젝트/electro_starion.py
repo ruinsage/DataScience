@@ -4,70 +4,69 @@ import requests
 import pandas as pd
 import cx_Oracle
 
-def get_request_url():
-    url = 'http://api.jejuits.go.kr/api/infoEvInfoList?code=860553'
 
-    response = requests.get(url)
+url = 'http://api.jejuits.go.kr/api/infoRoadEventList'
+key = 860553
+date = 20230104
+
+def get_request_url(url):
+    params = {'code': key}
+    response = requests.get(url, params=params)
     return response.text
+
+
 
 def get_parsed_json(raw_json):
     all_data = []
     for record in raw_json['info']:
         all_data.append(
-        {"id": record.get("id"),
-         "cid": record.get("cid"),
-         "name": record.get("name"),
-         "addr": record.get("addr"),
-         "use_time": record.get("use_time"),
-         "free": record.get("free"),
-         "b_name": record.get("b_name"),
-         "b_call": record.get("b_call"),
-         "type": record.get("type"),
-         "x_crdn": record.get("x_crdn"),
-         "y_crdn": record.get("y_crdn")}
+        {"ocrr_id": record.get("ocrr_id"),
+         "latitude": record.get("latitude"),
+         "longitude": record.get("longitude"),
+         "heading": record.get("heading"),
+         "link_id": record.get("link_id"),
+         "code": record.get("code")
+         }
         )
     return all_data
 
 def json_to_df_info(raw_json):
     all_data = []
-    column_list = ["id", "cid", "name","addr","use_time","free","b_name","b_call","type","x_crdn","y_crdn"]
+    column_list = ["ocrr_id", "latitude", "longitude","heading","link_id","code"]
 
     for record in raw_json['info']:
         all_data.append(
-            {"id": record.get("id"),
-             "cid": record.get("cid"),
-             "name": record.get("name"),
-             "addr": record.get("addr"),
-             "use_time": record.get("use_time"),
-             "free": record.get("free"),
-             "b_name": record.get("b_name"),
-             "b_call": record.get("b_call"),
-             "type": record.get("type"),
-             "x_crdn": record.get("x_crdn"),
-             "y_crdn": record.get("y_crdn")}
+            {"ocrr_id": record.get("ocrr_id"),
+             "latitude": record.get("latitude"),
+             "longitude": record.get("longitude"),
+             "heading": record.get("heading"),
+             "link_id": record.get("link_id"),
+             "code": record.get("code")
+             }
         )
     return column_list, all_data
 
-# def preprocessed_df_to_oracle(df):
-#     con = cx_Oracle.connect('open_source/1111@localhost:1521/xe')
-#     cur = con.cursor()
-#     sql_insert = '''
-#             insert into bus_753(정류소ID,정류소명,첫번째도착정보메시지,두번째도착정보메시지,제공시각)
-#             values(:정류소ID, :정류소명, :첫번째도착정보메시지, :두번째도착정보메시지, :제공시각)
-#             '''
-#     for i in range(len(df)-1):
-#         정류소ID = df.iloc[i]['정류소ID']
-#         정류소명 = df.iloc[i]['정류소명']  # int 값에 대해서는 int 형으로 변환해줘야 한다.
-#         첫번째도착정보메시지 = df.iloc[i]['첫번째도착정보메시지']
-#         두번째도착정보메시지 = df.iloc[i]['두번째도착정보메시지']
-#         제공시각 = df.iloc[i]['제공시각']
-#         cur.execute(sql_insert,
-#                 (정류소ID,정류소명,첫번째도착정보메시지,두번째도착정보메시지,제공시각 )
-#                 )
-#
-#     con.commit()
-#     cur.close()
-#     con.close()
+def preprocessed_df_to_oracle(df):
+    con = cx_Oracle.connect('open_source/1111@localhost:1521/xe')
+    cur = con.cursor()
+    sql_insert = '''
+            insert into danger_situation(ocrr_id,latitude,longitude,heading,link_id,code)
+            values(:ocrr_id, :latitude, :longitude, :heading, :link_id, :code )
+            '''
+    for i in range(len(df)-1):
+        ocrr_id = df.iloc[i]['ocrr_id']
+        latitude = df.iloc[i]['latitude']  # int 값에 대해서는 int 형으로 변환해줘야 한다.
+        longitude = df.iloc[i]['longitude']
+        heading = df.iloc[i]['heading']
+        link_id = df.iloc[i]['link_id']
+        code = df.iloc[i]['code']
+        cur.execute(sql_insert,
+                (ocrr_id,latitude,longitude,heading,link_id,code)
+                )
+
+    con.commit()
+    cur.close()
+    con.close()
 
 
 # def parking_area_info_collector():
