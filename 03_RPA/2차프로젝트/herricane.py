@@ -268,11 +268,9 @@ def wave_df_to_oracle(wave_df):
     con.close()
 
 def print_main_menu():
-    print('\n1. 화창한날 시뮬레이션 데이터 구축')
-    print('2. 태풍 시뮬레이션 데이터 구축')
-    print('3. 스케줄러 종료')
+    print('1. 태풍 시뮬레이션 데이터 구축')
+    print('2. 스케줄러 종료')
     print('* 엔터: 메뉴 업데이트\n')
-
 
 while True:
     print_main_menu()
@@ -282,18 +280,13 @@ while True:
     else:                menu_num = int(selection)
 
     if(menu_num == 1):
-        sunny_ROADEVENT_to_oracle(make_sunny_df('ROADEVENT'))
-        sunny_RoadWork_to_oracle(make_sunny_df('RoadWork'))
-        sunny_RoadCondition_to_oracle(make_sunny_df('RoadCondition'))
-        sunny_RoadClose_to_oracl(make_sunny_df('RoadClose'))
-
-    elif(menu_num == 2):
-        hericane_ROADEVENT_to_oracle(make_herricane_df('ROADEVENT'))
-        hericane_RoadWork_to_oracle(make_herricane_df('RoadWork'))
-        hericane_RoadCondition_to_oracle(make_herricane_df('RoadCondition'))
-        hericane_RoadClose_to_oracle(make_herricane_df('RoadClose'))
-
-    elif (menu_num == 3):
+        for i in range(4):
+            hericane_ROADEVENT_to_oracle(make_herricane_df(f'ROADEVENT{i}'))
+            hericane_RoadWork_to_oracle(make_herricane_df(f'RoadWork{i}'))
+            hericane_RoadCondition_to_oracle(make_herricane_df(f'RoadCondition{i}'))
+            hericane_RoadClose_to_oracle(make_herricane_df(f'RoadClose{i}'))
+            time.sleep(10)
+    elif (menu_num == 2):
         break
     elif (menu_num == 0):
         continue
