@@ -9,60 +9,49 @@ select * from gas_station;
 drop table review;
 select * from review;
 
-create table ROAD_WORK(
-id varchar2(38),
-lat varchar2(128),
-lon varchar2(128),
-heading number(38),
-link_id varchar2(64),
-whole_lane number(38),
-block_lane number(38),
-text varchar2(64),
-created_at timestamp,
-last_updated_at timestamp
-);
+
 
 create table ROAD_WORK(
-id varchar2(64),
-lat varchar2(128),
-lon varchar2(128),
-heading number(38),
-link_id varchar2(64),
-whole_lane number(38),
-block_lane number(38),
-text varchar2(128),
-created_at timestamp,
-last_updated_at timestamp
+id varchar2(255),
+lat FLOAT,
+lon float,
+heading number(10,0),
+link_id number(19,0),
+whole_lane number(19,0),
+block_lane varchar2(255),
+text varchar2(255),
+created_at timestamp(6),
+last_updated_at timestamp(6)
 );
 
 drop table ROAD_WORK;
 select * from ROAD_WORK;
 
 create table ROAD_CLOSE(
-id varchar2(64),
-lat varchar2(128),
-lon varchar2(128),
-heading number(38),
-link_id varchar2(64),
-whole_lane number(38),
-block_lane number(38),
-text varchar2(128),
-created_at timestamp,
-last_updated_at timestamp
+id number(20,0),
+lat number(10,5),
+lon number(10,5),
+heading number(10,5),
+link_id varchar2(128),
+whole_lane number(10),
+block_lane VARCHAR2(128),
+text clob,
+created_at timestamp(6),
+last_updated_at timestamp(6)
 );
 
 drop table ROAD_CLOSE;
 select * from ROAD_CLOSE;
 
 create table ROAD_EVENT(
-id  varchar2(256),
-lat varchar2(128),
-lon varchar2(128),
-heading number(16,10),
-link_id varchar2(64),
-code number(16,10),
-created_at timestamp,
-last_updated_at timestamp
+id  varchar2(50),
+lat number(10,6),
+lon number(10,6),
+heading number(10,2),
+link_id varchar2(50),
+code varchar2(50),
+created_at timestamp(6),
+last_updated_at timestamp(6)
 );
 
 drop table ROAD_EVENT;
@@ -72,27 +61,18 @@ drop table ROAD_CONDITION;
 select * from ROAD_CONDITION;
 
 create table ROAD_CONDITION(
-id  varchar2(256),
-lat varchar2(128),
-lon varchar2(128),
-heading number(16,10),
-link_id varchar2(64),
-visibility number(16,10),
-snow varchar2(128),
-road_temp varchar2(128),
-water_film varchar2(128),
-friction varchar2(128),
-code number(16,10),
-current_time timestamp
+id  number(19,0),
+lat number(10,5),
+lon number(10,5),
+heading number(10,5),
+link_id varchar2(128),
+visibility number(10,0),
+snow number(10,5),
+road_temp number(5,2),
+water_film number(10,5),
+friction number(10,5),
+code VARCHAR2(20),
+current_time timestamp(6)
 );
 
-create table wave2(
-관측소코드 varchar2(16),
-관측소명 varchar2(32),
-관측시간 TIMESTAMP,
-파도높이 number(8,3)
-);
-
-drop table wave2;
-select * from wave2;
 
