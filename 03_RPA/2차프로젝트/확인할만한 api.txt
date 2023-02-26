@@ -1,0 +1,25 @@
+로그인 시스템 만들기
+
+날씨 예측?
+
+숙박,음식,관광지,
+
+
+해양경찰청_낚시어선_주어업지_제주청_제주서_봄
+https://www.data.go.kr/data/15103929/fileData.do
+
+
+제주관광공사_비짓제주 관광정보 오픈
+https://www.data.go.kr/data/15103929/fileData.do
+
+제주특별자치도_제주디지털콘텐츠-이미지정보
+https://www.data.go.kr/data/15056566/openapi.do
+
+제주특별자치도_제주지역 상세기상정보 조회서비스
+https://www.data.go.kr/data/15058361/openapi.do
+
+제주특별자치도_제주문화예술진흥원 공연/전시 정보
+https://www.data.go.kr/data/15057632/openapi.do
+
+해양수산부_해수욕장정보 서비스
+https://www.data.go.kr/data/15058519/openapi.do
