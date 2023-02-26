@@ -1,54 +1,50 @@
 import pandas as pd
-import statsmodels.api as sm
-import numpy as np
-import warnings
-from itertools import combinations, permutations
-from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
+from statsmodels.formula.api import ols
+import operator
+from itertools import combinations
+from datetime import datetime
+import time
+import seaborn as sns
 
-warnings.filterwarnings('ignore')
+start = datetime.fromtimestamp(time.time())
+print("결과 예측하기")
 
 heart = pd.read_csv('heart.csv', sep=',', header=0)
+#Boston_house.columns = Boston_house.columns.str.replace(' ', '_')  #열 이름에 공백이 있을 경우 공백을 언더바로 바꾸는데 사용하는 코드
 
-feature = heart[heart.columns.difference(['target'])]
-label = heart['target']
+match_dict = {}
+columns_list = ['age','sex','cp','trestbps','chol','fbs','restecg','thalach','exang','oldpeak','slope','ca','thal']
 
-len = len(heart.columns.difference(['target']))
+for num in range(1,len(columns_list)+1):
+    combi_list = list(combinations(columns_list, num))
+    #print(combi_list)
+    for tup in combi_list:
+        my_formula = 'target ~ '
+        for data in tup:
+            my_formula += '%s + '%data
+        my_formula = my_formula.strip().rstrip('+')
+        lm = ols(my_formula, data = heart).fit()
+        dependent_variable = heart['target']
+        independent_variable = heart[list(tup)] # formula에 들어간 columns만 골라서 고정 변수로 줌
+        y_predicted = lm.predict(independent_variable)
+        y_predicted_rounded = [round(score) for score in y_predicted]
+        match_count = 0
+        for index in range(len(y_predicted_rounded)):
+            if y_predicted_rounded[index] == dependent_variable.values[index]:
+                match_count += 1
+        print('\n>>'+my_formula.replace('target ~ ',''))
+        print('>> match count = ', match_count)
+        print('>> 정답률: %.3f %%'%(match_count/len(y_predicted_rounded)*100))
+        match_dict['%s'%my_formula.replace('target ~ ','')] = match_count/len(y_predicted_rounded)*100
 
-best = []
+# 최대값 찾기
+match_dic = sorted(match_dict.items(), key = operator.itemgetter(1), reverse= True)
+#print(match_dic)
 
-max = 0
-
-for num in range(1, len + 1) :
-    combi = list(combinations(heart.columns.difference(['target']), num))
-
-    for tup in combi :
-        try :
-            feature = heart[list(tup)]
-            train_input, test_input, train_target, test_target = train_test_split(
-                feature, label,stratify=label, random_state=300)
-
-            mean = np.mean(train_input, axis=0)
-            std = np.std(train_input, axis=0)
-
-            train_scaled=(train_input-mean)/std
-
-            test_scaled = ((test_input) - mean) / std
-
-            kn = KNeighborsClassifier()
-
-            kn.fit(train_input, train_target)
-
-            kn.score(train_input, train_target)
-
-            kn.fit(train_scaled, train_target)
-
-            if kn.score(test_scaled, test_target) > max :
-                max = kn.score(test_scaled, test_target)
-                best = feature
-                print(max)
-        except:
-            pass
-
-print(max)
-print(best)
+print("\n\n 독립변수 최적화 분석 결과")
+print('총 조합 갯수: %d'%len(match_dic))
+print('MAX 조합: %s >> %.3f %%'%(match_dic[0][0],match_dic[0][1]))
+end = datetime.fromtimestamp(time.time())
+print(f'분석 시작: {start}')
+print(f'분석 종료: {end}')
+print(f'총 분석 시간: {end - start}')
